@@ -1,0 +1,6 @@
+# Best practice
+
+## Features
+
+### Linting
+
