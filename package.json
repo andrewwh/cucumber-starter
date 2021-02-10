@@ -4,7 +4,6 @@
   "description": "Cucumber starter",
   "main": "out/index.js",
   "scripts": {
-    "help": "node out/index.js --help",
     "start": "node out/index.js",
     "build": "tsc",
     "clean": "rm -rf out/*; rm -f tsconfig.tsbuildinfo",

@@ -1,7 +1,7 @@
 import * as Search from '../page-objects/search';
 
 Then(/^I should see the google logo$/, async () => {
-    return expect(Search.isGoogleLogoPresent()).to.eventually.equal(true);
+    return expect(Search.isGoogleLogoPresent()).to.eventually.be.true;
 });
 
 When(/^I enter "([^"]*)" in the search field$/, async (text: string) => {
