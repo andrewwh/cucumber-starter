@@ -3,7 +3,6 @@ import {Cli} from '@cucumber/cucumber';
 import {Configuration, ConfigurationService} from './runtime/configuration';
 import {default as path} from 'path';
 import {default as fs} from 'fs-plus';
-import * as htmlReporter from 'multiple-cucumber-html-reporter';
 
 async function main(): Promise<void> {
     const program = new Command();
@@ -35,7 +34,7 @@ async function main(): Promise<void> {
     args.push('--retry', '1');
     args.push('--require', path.join('out', 'runtime', 'boot.js'));
     args.push('--require', path.join('out', 'step-definitions'));
-    args.push('--format', `json:${path.join('reports', 'cucumber.json')}`);    
+    args.push('--format', `html:${path.join('reports', 'cucumber.html')}`);    
 
     if (program.site) {
         config.defaultUrl = program.site;
@@ -95,17 +94,7 @@ async function main(): Promise<void> {
         stdout: process.stdout
     });    
 
-    const result = await cucumber.run();
-
-    if (!result.shouldExitImmediately) {
-        /**
-         * Create html report
-         */
-        await htmlReporter.generate({
-            jsonDir: reports,
-            reportPath: reports
-        });
-    }
+    await cucumber.run();
 
     // Force an exit
     process.exit();
