@@ -18,4 +18,4 @@ Scenario: I should be able to open a google search page and view doodles
   When I focus on the search field
   And I click on the "I'm Feeling Lucky" submit button
   Then I should see the page title is "Google Doodles"
-  And I should see the url is "https://www.google.com/doodles/"
+  And I should see the url is "https://www.google.com/doodles"

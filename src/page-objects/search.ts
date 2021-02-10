@@ -2,12 +2,10 @@ import {until, By} from 'selenium-webdriver';
 import {driver} from '../runtime';
 
 export async function isGoogleLogoPresent(): Promise<boolean> {
-    const locator = By.id('hplogo');
+    const locator = By.css('img[alt="Google"]');
     await driver().wait(until.elementLocated(locator));
 
-    const logo = await driver().findElement(locator);
-
-    return (await logo.getAttribute('alt')) == 'Google';
+    return true;
 }
 
 export async function setFocusOnSearchField(): Promise<void> {
