@@ -1,8 +1,7 @@
 # Cucumber with NodeJs Starter
+Cucumber with NodeJs is a quick start to get you using cucumber without having to develop your own. 
 
-## Table of Contents
 - [Cucumber with NodeJs Starter](#cucumber-with-nodejs-starter)
-  - [Table of Contents](#table-of-contents)
   - [Getting Started](#getting-started)
     - [Install](#install)
     - [Run Scenarios](#run-scenarios)
@@ -13,10 +12,12 @@
       - [Complex tag expression](#complex-tag-expression)
   - [Writing your own features](#writing-your-own-features)
   - [Writing step definitions](#writing-step-definitions)
-    - [Npm Commands](#npm-commands)
+  - [Npm Commands](#npm-commands)
     - [CLI Options](#cli-options)
   - [Supported Browsers](#supported-browsers)
     - [Variants](#variants)
+
+- [Developing this Framework](DEVELOP.md)
 
 ## Getting Started
 You will need:
@@ -33,7 +34,7 @@ You will need:
 
 
 ### Run Scenarios
-The example scenarios have been designed against google.com which should be universally accessible for demonstration purposes. 
+The example scenarios have been designed against google.com which should be universally accessible for demonstration purposes. By default the tests will run headless.
 
 > Some features may fail as google is constantly changing. Use this to view the failure report and screen capture.
 
@@ -74,16 +75,18 @@ This starter contains some basic examples of automation against Google. This is 
 
 > To remove example code, delete the features from the "features" directory and driver specific code from "page-objects" and "step-definitions".
 
-See [Gherkin Reference](https://cucumber.io/docs/gherkin/) for how to write and organise Gherkin.
+See: 
+* [Writing features](FEATURES.md)
+* [Gherkin Reference](https://cucumber.io/docs/gherkin/) for how to write and organise Gherkin.
 
 ## Writing step definitions
 Once you have written your features you need to code your step definitions.
 
-See 
-* [Development Guide](DEVELOP.md)
-* [Best Practices](BEST.md)
+See: 
+* [How to write step definitions](STEP-DEFINITIONS.md)
+* [Use page objects](PAGE-OBJECTS.md)
 
-### Npm Commands
+## Npm Commands
 
 | Option       | Description                                                          |
 | ------------ | -------------------------------------------------------------------- |
